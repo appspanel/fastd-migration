@@ -8,8 +8,9 @@
  */
 
 use FastD\Migration\Key;
+use PHPUnit\Framework\TestCase;
 
-class IndexTest extends PHPUnit_Framework_TestCase
+class IndexTest extends TestCase
 {
     public function testPrimary()
     {

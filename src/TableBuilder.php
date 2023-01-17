@@ -10,6 +10,7 @@
 namespace FastD\Migration;
 
 use PDO;
+use PDOException;
 
 /**
  * Class Migration
@@ -434,8 +435,8 @@ WHERE
         }
 
         if (false === $this->pdo->exec($this->getTableInfo())) {
-            list($code, $errorCode, $message) = $this->pdo->errorInfo();
-            throw new \PDOException(sprintf('ERROR %s (%s): %s', $code, $errorCode, $message));
+            [$code, $errorCode, $message] = $this->pdo->errorInfo();
+            throw new PDOException(sprintf('ERROR %s (%s): %s', $code, $errorCode, $message));
         } else {
             $this->saveCache($this->table);
         }

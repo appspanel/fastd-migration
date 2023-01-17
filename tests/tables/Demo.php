@@ -1,7 +1,6 @@
 <?php
 
 use \FastD\Migration\MigrationAbstract;
-use \FastD\Migration\Column;
 use \FastD\Migration\Table;
 
 
@@ -31,6 +30,6 @@ class Demo extends MigrationAbstract
      */
     public function dataSet()
     {
-        
+
     }
 }

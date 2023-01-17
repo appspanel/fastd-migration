@@ -11,7 +11,8 @@ namespace FastD\Migration;
 
 
 use PDO;
-use FastD\QueryBuilder\MySqlBuilder;
+use PDOException;
+use RuntimeException;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Command\HelpCommand;
 use Symfony\Component\Console\Helper\Table as SymfonyTable;
@@ -272,7 +273,7 @@ class Migrate extends Command
     {
         $tableName = $input->getArgument('table');
         if (empty($tableName)) {
-            throw new \RuntimeException('Table name is empty.');
+            throw new RuntimeException('Table name is empty.');
         }
         $table = new Table($tableName);
         $table
@@ -428,7 +429,7 @@ class Migrate extends Command
                         }
                     }
                     $this->renderTableInfo($input, $output, $table);
-                } catch (\PDOException $e) {
+                } catch (PDOException $e) {
                     $output->writeln(sprintf(
                         "<fg=red>✗</> %s \n  File: %s\n  Line: %s\n",
                         $e->getMessage(),

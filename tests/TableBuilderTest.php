@@ -7,11 +7,11 @@
  * @see      http://www.fast-d.cn/
  */
 
-use FastD\Migration\Column;
 use FastD\Migration\Table;
 use FastD\Migration\TableBuilder;
+use PHPUnit\Framework\TestCase;
 
-class TableBuilderTest extends PHPUnit_Framework_TestCase
+class TableBuilderTest extends TestCase
 {
     public function testCreate()
     {
@@ -19,7 +19,7 @@ class TableBuilderTest extends PHPUnit_Framework_TestCase
         $builder = new TableBuilder();
         $sql = <<<SQL
 CREATE TABLE IF NOT EXISTS `test` (
-`test` varchar(200) NOT NULL DEFAULT "" COMMENT ""
+`test` varchar(200) NOT NULL DEFAULT '' COMMENT ""
 ) ENGINE InnoDB CHARSET utf8 COMMENT "";
 SQL;
         $this->assertEquals($sql, $builder->create($table)->getTableInfo());

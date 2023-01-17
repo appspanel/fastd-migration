@@ -1,7 +1,6 @@
 <?php
 
 use \FastD\Migration\MigrationAbstract;
-use \FastD\Migration\Column;
 use \FastD\Migration\Table;
 
 
@@ -30,6 +29,6 @@ class Phinxlog extends MigrationAbstract
      */
     public function dataSet()
     {
-        
+
     }
 }

@@ -3,7 +3,7 @@
         bootstrap="vendor/autoload.php"
 >
     <testsuites>
-        <testsuite>
+        <testsuite name="fastd/migration">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

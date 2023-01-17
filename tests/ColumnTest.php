@@ -8,8 +8,9 @@
  */
 
 use FastD\Migration\Column;
+use PHPUnit\Framework\TestCase;
 
-class ColumnTest extends PHPUnit_Framework_TestCase
+class ColumnTest extends TestCase
 {
     public function testColumn()
     {

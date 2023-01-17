@@ -9,8 +9,11 @@
 
 namespace FastD\Migration;
 
+use LogicException;
+
 /**
  * Class Column
+ *
  * @package FastD\Migration
  */
 class Column
@@ -117,10 +120,10 @@ class Column
         $type = strtolower($type);
 
         if (!array_key_exists($type, $this->columns)) {
-            throw new \LogicException(sprintf('unknown data type %s', $type));
+            throw new LogicException(sprintf('unknown data type %s', $type));
         }
 
-        list(, $defaultLength, $defaultValue) = $this->columns[$type];
+        [, $defaultLength, $defaultValue] = $this->columns[$type];
 
         $this->name = $columnName;
 
