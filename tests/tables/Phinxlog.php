@@ -1,7 +1,7 @@
 <?php
 
-use \FastD\Migration\MigrationAbstract;
-use \FastD\Migration\Table;
+use FastD\Migration\MigrationAbstract;
+use FastD\Migration\Table;
 
 
 class Phinxlog extends MigrationAbstract
