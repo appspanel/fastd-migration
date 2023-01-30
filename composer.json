@@ -7,14 +7,14 @@
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": ">=7.4",
         "ext-pdo": "*",
-        "symfony/console": "^6.0",
-        "fastd/config": "^3.0",
-        "fastd/query-builder": "^2.0@beta"
+        "symfony/console": "5.4.*",
+        "fastd/config": "^3.3",
+        "fastd/query-builder": "^2.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.3"
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
@@ -25,5 +25,12 @@
         "psr-4": {
             "": "tests/tables"
         }
-    }
+    },
+    "repositories": [
+        {
+            "name": "fastd/config",
+            "type": "vcs",
+            "url": "https://github.com/appspanel/fastd-config.git"
+        }
+    ]
 }
