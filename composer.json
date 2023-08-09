@@ -9,7 +9,7 @@
     "require": {
         "php": ">=7.4",
         "ext-pdo": "*",
-        "symfony/console": "5.4.*",
+        "symfony/console": "6.3.*",
         "fastd/config": "^3.3",
         "fastd/query-builder": "^2.0"
     },
